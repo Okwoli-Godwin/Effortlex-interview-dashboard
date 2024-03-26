@@ -14,6 +14,7 @@ import img7 from "../assets/bits.png"
 import img8 from "../assets/bitss.png"
 import img9 from "../assets/mar.png"
 import img10 from "../assets/rec.png"
+import img11 from "../assets/mask.png"
 
 
 const Dashboardhome = () => {
@@ -278,7 +279,12 @@ const Dashboardhome = () => {
             </LineChart>
           </div>
           
-          <div className="w-[38%] rounded-lg bg-bb overflow-hidden relative">
+        <div style={{
+            backgroundImage: `url(${img11})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"
+          }} className="w-[38%] rounded-lg overflow-hidden relative">
             <div className="w-[100%] h-[100%] p-[16px] bg-[#4f41bcde] flex flex-col">
               <p className="text-white text-[13px]">Sales team target</p>
               <div className="w-[100%] flex items-center justify-between">
