@@ -6,9 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        bb: "url('./src/assets/mask.png')",
-      },
+      backgroundImage: theme => ({
+        'bb': "url('./src/assets/mask.png')",
+      }),
       colors: {
 				border: "#AEAEAE",
 				input: "hsl(var(--input))",

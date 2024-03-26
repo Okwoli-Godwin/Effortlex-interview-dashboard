@@ -9,12 +9,12 @@ import img2 from "../assets/Bitmap.png"
 import img3 from "../assets/edwards.png"
 import img4 from "../assets/larissa.png"
 import img5 from "../assets/derrick.png"
-// import img6 from "../assets/bit.png"
-// import img7 from "../assets/bits.png"
-// import img8 from "../assets/bitss.png"
-// import img9 from "../assets/mar.png"
-// import img10 from "../assets/rec.png"
-import img11 from "../assets/mask.png"
+import img6 from "../assets/bit.png"
+import img7 from "../assets/bits.png"
+import img8 from "../assets/bitss.png"
+import img9 from "../assets/mar.png"
+import img10 from "../assets/rec.png"
+
 
 const Dashboardhome = () => {
   const data = [
@@ -278,10 +278,35 @@ const Dashboardhome = () => {
             </LineChart>
           </div>
           
-          <div className="w-[38%] rounded-lg overflow-hidden relative">
-            <img src={img11} alt="" className="  w-[100%] left-0 top-0"/>
-          <div className="z-20 absolute top-0 w-[100%] h-[100%] bg-[#ff000057]">
-            jdjdjdjdjdj
+          <div className="w-[38%] rounded-lg bg-bb overflow-hidden relative">
+            <div className="w-[100%] h-[100%] p-[16px] bg-[#4f41bcde] flex flex-col">
+              <p className="text-white text-[13px]">Sales team target</p>
+              <div className="w-[100%] flex items-center justify-between">
+                <h3 className="text-[23px] text-[#fff] font-[700]">82%</h3>
+                <div className="flex items-center">
+                  <img src={img6} alt="" className="h-[50px] z-30"/>
+                  <img src={img7} alt="" className="h-[50px] ml-[-22px] z-20"/>
+                  <img src={img8} alt="" className="h-[50px] ml-[-22px] z-10"/>
+                  <div className="w-[33px] h-[33px] bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-900 rounded-full mb-[10px] flex justify-center items-center text-[#fff] text-[13px] ml-[-18px]">
+                    +4
+                  </div>
+                  <img src={img9} alt="" className="h-[32px] mb-[9px] ml-[30px] cursor-pointer"/>
+                </div>
+              </div>
+              <p className="text-white text-[13px] mt-[-12px]">Achieved</p>
+              
+              <div className="w-[100%] flex flex-col mt-[20px] relative">
+                <p className="text-white text-[13px]">Cleared Qeue</p>
+                <h3 className="text-[23px] text-[#fff] font-[700]">1.4k</h3>
+                <div className="flex items-center">
+                  <p className="text-[13px] text-white">No. of Bills</p>
+                  <div className="w-[19px] h-[19px] bg-[#FFD84D] rounded-full flex justify-center items-center text-[13px] text-primary ml-[10px]">
+                  <PiArrowUpRightFill />
+                  </div>
+                  <p className="text-[13px] text-white ml-[5px]">+15%</p>
+                </div>
+                <img src={img10} alt="" className="absolute right-[3px] h-[60px]"/>
+              </div>
             </div>
           </div>
         </div>

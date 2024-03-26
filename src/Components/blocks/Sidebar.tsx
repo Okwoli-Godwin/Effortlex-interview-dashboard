@@ -14,7 +14,7 @@ const Sidebar = () => {
     const navigate = useNavigate();
     const active = location?.pathname;
   return (
-    <div className="w-[20%] h-[100vh] bg-primary flex flex-col pt-[40px] pl-[10px] pr-[20px]">
+    <div className="w-[20%] h-[100vh] bg-primary flex flex-col pt-[40px] pl-[10px] pr-[20px] fixed">
         <div className="flex items-center pl-[18px]">
             <img src={img} alt=""className="h-[35px]" />
             <img src={img2} alt="" className="h-[45px] ml-[-13px]"/>
