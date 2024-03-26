@@ -86,10 +86,10 @@ const Dashboardhome = () => {
           </div>
         </div>
         
-        <div className="w-[100%] flex flex-col mt-[10px]">
+        <div className="w-[100%] flex flex-col mt-[20px]">
           <h4 className="text-[14px] font-[600] ml-[12px]">Top Sales Representative</h4>
           
-          <div className="w-[100%] flex items-center h-[40px] mt-[10px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
+          <div className="w-[100%] flex items-center h-[40px] mt-[10px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
             <div className="flex items-center w-[205px]">
               <img src={img2} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Nicholas Patrick</p>
@@ -106,7 +106,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
             <div className="flex items-center w-[205px]">
               <img src={img3} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Cordell Edwards</p>
@@ -123,7 +123,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
             <div className="flex items-center w-[205px]">
               <img src={img5} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Derrick Spencer</p>
@@ -140,7 +140,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
             <div className="flex items-center w-[205px]">
               <img src={img4} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Larissa Burton</p>
@@ -159,7 +159,7 @@ const Dashboardhome = () => {
         </div>
         
         <div className="flex items-center justify-between mt-[5px]">
-          <div className="w-[225px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Product sold</p>
             <h3 className="font-[700] text-[19px]">25.1k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -180,7 +180,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[225px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Total Profit</p>
             <h3 className="font-[700] text-[19px]">$2,435k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -201,7 +201,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[225px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Total No. of Claim</p>
             <h3 className="font-[700] text-[19px]">3.5M</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -223,7 +223,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[225px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">New Customer</p>
             <h3 className="font-[700] text-[19px]">43.5k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -245,8 +245,8 @@ const Dashboardhome = () => {
           </div>
         </div>
         
-        <div className="w-[100%] flex justify-between mt-[15px]">
-          <div className="w-[60%] border p-[12px] border-[#D3CBFB] rounded-lg flex flex-col">
+        <div className="w-[100%] flex justify-between mt-[20px]">
+          <div className="w-[60%] border p-[15px] border-[#D3CBFB] rounded-lg flex flex-col">
             <div className="w-[100%] flex justify-between">
               <h3 className="text-[14px] font-[600]">Claims Over the Years</h3>
               
@@ -262,8 +262,8 @@ const Dashboardhome = () => {
               </div>
             </div>
             <LineChart className="ml-[-40px]"
-                width={605} 
-                height={150}
+                width={665} 
+                height={170}
                 data={data}
                 margin={{
                     top: 20,
