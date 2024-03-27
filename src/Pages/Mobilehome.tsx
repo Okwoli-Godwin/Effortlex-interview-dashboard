@@ -352,11 +352,13 @@ const Mobilehome = () => {
               </div>
             </div>
 
-             <ResponsiveContainer width="100%" height={170}>
-                 <LineChart className="ml-[-40px]"
+             <div className="w-[100%]">
+                <ResponsiveContainer width="100%" height={170}>
+                 <LineChart 
                 data={data}
                 margin={{
                     top: 20,
+                    left: -33,
                 }}
             >
                 <defs>
@@ -368,11 +370,36 @@ const Mobilehome = () => {
                 <CartesianGrid stroke="transparent" />
                 <XAxis dataKey='name' axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} className="text-[#5041BC] text-[11px]" />
                 <YAxis className="text-[#5041BC] text-[11px]" axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} tickFormatter={(tick) => Math.round(tick).toString().slice(0, 2)}/>
-                <Tooltip />
+                <Tooltip
+                  contentStyle={{
+                    background: 'linear-gradient(229.42deg, #3D29D0 26.93%, #C25FFF 98.11%)',
+                    border: '1px solid #CED6DE', 
+                    borderRadius: '15px',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                    padding: '10px',
+                }}
+                labelStyle={{
+                    color: '#333',
+                    fontSize: '12px',
+                    fontWeight: 'bold',
+                }}
+                itemStyle={{
+                    color: '#fff',
+                    fontSize: '12px',
+                }}
+                cursor={{ fill: '#000000' }}
+                formatter={(value, name, props) => {
+                    if (name === 'c2') {
+                        return `${props.payload.name}: ${value}`;
+                    }
+                    return null;
+                }}
+                />
                 <Line type="monotone" dataKey="c2" stroke="#E26169" strokeWidth={3} dot={false} />
                 <Line type="monotone" dataKey="c3" stroke="#5041BC" strokeWidth={3} dot={false} filter="url(#shadow)"/>
             </LineChart>
              </ResponsiveContainer>
+             </div>
 
           </div>
           

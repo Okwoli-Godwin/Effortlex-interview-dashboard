@@ -92,10 +92,10 @@ const Dashboardhome = () => {
           </div>
         </div>
         
-        <div className="w-[100%] flex flex-col mt-[20px]">
+        <div className="w-[100%] flex flex-col mt-[10px]">
           <h4 className="text-[14px] font-[600] ml-[12px]">Top Sales Representative</h4>
           
-          <div className="w-[100%] flex items-center h-[40px] mt-[10px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
+          <div className="w-[100%] flex items-center h-[40px] mt-[10px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
             <div className="flex items-center w-[205px]">
               <img src={img2} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Nicholas Patrick</p>
@@ -112,7 +112,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
             <div className="flex items-center w-[205px]">
               <img src={img3} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Cordell Edwards</p>
@@ -129,7 +129,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
             <div className="flex items-center w-[205px]">
               <img src={img5} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Derrick Spencer</p>
@@ -146,7 +146,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[15px]">
+          <div className="w-[100%] flex items-center h-[40px] border border-[#EBE8FF] rounded-lg pl-[40px] pr-[40px] justify-between mb-[10px]">
             <div className="flex items-center w-[205px]">
               <img src={img4} alt="" className="h-[27px]"/>
               <p className="text-[#797D8C] text-[14px] ml-[22px]">Larissa Burton</p>
@@ -284,7 +284,31 @@ const Dashboardhome = () => {
                 <CartesianGrid stroke="transparent" />
                 <XAxis dataKey='name' axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} className="text-[#5041BC] text-[11px]" />
                 <YAxis className="text-[#5041BC] text-[11px]" axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} tickFormatter={(tick) => Math.round(tick).toString().slice(0, 2)}/>
-                <Tooltip />
+                <Tooltip
+                  contentStyle={{
+                    background: 'linear-gradient(229.42deg, #3D29D0 26.93%, #C25FFF 98.11%)',
+                    border: '1px solid #CED6DE', 
+                    borderRadius: '15px',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                    padding: '10px',
+                }}
+                labelStyle={{
+                    color: '#333',
+                    fontSize: '12px',
+                    fontWeight: 'bold',
+                }}
+                itemStyle={{
+                    color: '#fff',
+                    fontSize: '12px',
+                }}
+                cursor={{ fill: '#000000' }}
+                formatter={(value, name, props) => {
+                    if (name === 'c2') {
+                        return `${props.payload.name}: ${value}`;
+                    }
+                    return null;
+                }}
+                />
                 <Line type="monotone" dataKey="c2" stroke="#E26169" strokeWidth={3} dot={false} />
                 <Line type="monotone" dataKey="c3" stroke="#5041BC" strokeWidth={3} dot={false} filter="url(#shadow)"/>
             </LineChart>
