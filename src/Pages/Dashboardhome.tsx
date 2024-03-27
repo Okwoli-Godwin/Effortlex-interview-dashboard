@@ -3,7 +3,8 @@ import { FaBell } from "react-icons/fa6";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { PiArrowUpRightFill, PiArrowDownLeftFill } from "react-icons/pi";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
+import { MdOutlineMenu } from "react-icons/md";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import img from "../assets/profile.png"
 import img2 from "../assets/Bitmap.png"
 import img3 from "../assets/edwards.png"
@@ -15,6 +16,7 @@ import img8 from "../assets/bitss.png"
 import img9 from "../assets/mar.png"
 import img10 from "../assets/rec.png"
 import img11 from "../assets/mask.png"
+import Mobilehome from "./Mobilehome";
 
 
 const Dashboardhome = () => {
@@ -57,19 +59,23 @@ const Dashboardhome = () => {
   },
 ]
   return (
-    <div className="w-[82%] bg-white absolute right-0 h-[100vh] rounded-tl-[30px] rounded-bl-[30px] pt-[13px] pb-[10px] pl-[27px] pr-[27px] flex-col">
+    <>
+        <div className="w-[82%] bg-white absolute right-0 h-[100%] rounded-tl-[30px] rounded-bl-[30px] pt-[13px] pb-[10px] pl-[27px] pr-[27px] flex-col md:w-[100%] md:hidden sm:hidden">
         <div className="flex w-[100%] items-center justify-between">
-          <h3 className="text-[19px] font-[500] ml-[12px]">Overview</h3>
+          <div className="flex items-center">
+            <div className="hidden md:flex text-[22px] text-[#797D8C] cursor-pointer"><MdOutlineMenu /></div>
+            <h3 className="text-[19px] font-[500] ml-[12px]">Overview</h3>
+          </div>
           
           <div className="flex items-center">
-            <div className="flex items-center w-[270px] h-[30px] bg-[#4f41bc1a] rounded-full overflow-hidden">
+            <div className="flex items-center w-[270px] h-[30px] bg-[#4f41bc1a] rounded-full overflow-hidden md:hidden">
               <input type="text" placeholder="Search" className="flex-1 h-[100%] outline-none pl-[13px] pr-[10px] bg-transparent text-[13px] placeholder:text-primary"/>
               <div className="w-[35px] h-[100%] flex justify-center items-center text-primary">
                 <IoSearchSharp />
               </div>
             </div>
             
-            <div className="text-primary ml-[40px] text-[22px] relative cursor-pointer">
+            <div className="text-primary ml-[40px] text-[22px] relative cursor-pointer md:hidden">
               <FaBell />
               <div className="w-[10px] h-[10px] rounded-full bg-[#EA8F95] absolute right-[0px] top-[3px]"></div>
             </div>
@@ -158,8 +164,8 @@ const Dashboardhome = () => {
           </div>
         </div>
         
-        <div className="flex items-center justify-between mt-[5px]">
-          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+        <div className="flex items-center justify-between mt-[5px] md:flex-wrap">
+          <div className="w-[247px] md:w-[49%] md:mb-[12px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Product sold</p>
             <h3 className="font-[700] text-[19px]">25.1k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -180,7 +186,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] md:w-[49%] md:mb-[12px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Total Profit</p>
             <h3 className="font-[700] text-[19px]">$2,435k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -201,7 +207,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] md:w-[49%] md:mb-[12px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">Total No. of Claim</p>
             <h3 className="font-[700] text-[19px]">3.5M</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -223,7 +229,7 @@ const Dashboardhome = () => {
             </div>
           </div>
           
-          <div className="w-[247px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
+          <div className="w-[247px] md:w-[49%] md:mb-[12px] p-[15px] relative border border-[#D3CBFB] rounded-lg">
             <p className="text-[12px] text-[#797D8C]">New Customer</p>
             <h3 className="font-[700] text-[19px]">43.5k</h3>
             <div className="w-[100%] flex items-center justify-between mt-[5px]">
@@ -246,7 +252,7 @@ const Dashboardhome = () => {
         </div>
         
         <div className="w-[100%] flex justify-between mt-[20px]">
-          <div className="w-[60%] border p-[15px] border-[#D3CBFB] rounded-lg flex flex-col">
+          <div className="w-[60%] md:w-[55%] border p-[15px] pl-[20px] pr-[20px] border-[#D3CBFB] rounded-lg flex flex-col">
             <div className="w-[100%] flex justify-between">
               <h3 className="text-[14px] font-[600]">Claims Over the Years</h3>
               
@@ -261,13 +267,12 @@ const Dashboardhome = () => {
                 </div>
               </div>
             </div>
-            <LineChart className="ml-[-40px]"
-                width={665} 
-                height={170}
+
+             <ResponsiveContainer width="100%" height={170}>
+                 <LineChart className="ml-[-40px]"
                 data={data}
                 margin={{
                     top: 20,
-                    right: 30,
                 }}
             >
                 <CartesianGrid stroke="transparent" />
@@ -277,6 +282,8 @@ const Dashboardhome = () => {
                 <Line type="monotone" dataKey="c2" stroke="#E26169" strokeWidth={3} dot={false} />
                 <Line type="monotone" dataKey="c3" stroke="#5041BC" strokeWidth={3} dot={false} />
             </LineChart>
+             </ResponsiveContainer>
+
           </div>
           
         <div style={{
@@ -284,7 +291,7 @@ const Dashboardhome = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat"
-          }} className="w-[38%] rounded-lg overflow-hidden relative">
+          }} className="w-[38%] md:w-[42%] rounded-lg overflow-hidden relative">
             <div className="w-[100%] h-[100%] p-[16px] bg-[#4f41bcde] flex flex-col">
               <p className="text-white text-[13px]">Sales team target</p>
               <div className="w-[100%] flex items-center justify-between">
@@ -317,6 +324,10 @@ const Dashboardhome = () => {
           </div>
         </div>
     </div>
+    <div className="hidden md:flex sm:flex w-[100%] flex-col">
+      <Mobilehome />
+    </div>
+    </>
   )
 }
 
