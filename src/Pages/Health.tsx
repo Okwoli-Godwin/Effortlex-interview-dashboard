@@ -64,7 +64,7 @@ const Health = () => {
             </div>
         </div>
         <div className={`fixed left-0 top-[70px] sm:top-[130px] bg-[rgba(0,0,0,0.5)] sm:z-[100] w-[100%] h-[100vh] ${show ? "translate-x-0" : "-translate-x-full"}`}>
-            <div className={`w-[30%] sm:w-[50%] flex flex-col p-[15px] h-full bg-[#fff] fixed  duration-500 ease-out left-0 transition-transform transform ${show ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className={`w-[30%] sm:w-[55%] flex flex-col p-[15px] h-full bg-[#fff] fixed  duration-500 ease-out left-0 transition-transform transform ${show ? "translate-x-0" : "-translate-x-full"}`}>
                 <div onClick={() => {navigate("/");}}
 			    className={`w-[100%] mt-[30px] sm:mt-[5px] min-h-[45px] flex justify-start  items-center pl-[20px] mb-[5px] rounded-lg cursor-pointer 
           ${active === "/" ? "bg-primary text-white" : "text-primary"}`}>
