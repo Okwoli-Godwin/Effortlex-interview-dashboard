@@ -359,12 +359,18 @@ const Mobilehome = () => {
                     top: 20,
                 }}
             >
+                <defs>
+                   <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feDropShadow dx="0" dy="20" stdDeviation="25" floodColor="rgba(69, 51, 201, 0.3)" floodOpacity="0.8"/>
+                      <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="rgba(69, 51, 201, 0.5)" floodOpacity="0.6"/>
+                  </filter>
+                </defs>
                 <CartesianGrid stroke="transparent" />
                 <XAxis dataKey='name' axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} className="text-[#5041BC] text-[11px]" />
                 <YAxis className="text-[#5041BC] text-[11px]" axisLine={{ stroke: '#CED6DE', strokeWidth: 2 }} tickFormatter={(tick) => Math.round(tick).toString().slice(0, 2)}/>
                 <Tooltip />
                 <Line type="monotone" dataKey="c2" stroke="#E26169" strokeWidth={3} dot={false} />
-                <Line type="monotone" dataKey="c3" stroke="#5041BC" strokeWidth={3} dot={false} />
+                <Line type="monotone" dataKey="c3" stroke="#5041BC" strokeWidth={3} dot={false} filter="url(#shadow)"/>
             </LineChart>
              </ResponsiveContainer>
 
@@ -374,7 +380,8 @@ const Mobilehome = () => {
             backgroundImage: `url(${img11})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
+            boxShadow: "0 10px 15px -3px rgba(69, 51, 201, 0.3), 0 4px 6px -2px rgba(69, 51, 201, 0.5)"
           }} className="w-[38%] sm:w-[100%] sm:mt-[20px] md:w-[42%] rounded-lg overflow-hidden relative">
             <div className="w-[100%] h-[100%] p-[16px] bg-[#4f41bcde] flex flex-col">
               <p className="text-white text-[13px]">Sales team target</p>
@@ -409,7 +416,7 @@ const Mobilehome = () => {
         </div>
         
          <div className={`fixed left-0 top-[70px] sm:top-[130px] bg-[rgba(0,0,0,0.5)] sm:z-[100] w-[100%] h-[100vh] ${show ? "translate-x-0" : "-translate-x-full"}`}>
-            <div className={`w-[30%] sm:w-[50%] flex flex-col p-[15px] h-full bg-[#fff] fixed  duration-500 ease-out left-0 transition-transform transform ${show ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className={`w-[30%] sm:w-[55%] flex flex-col p-[15px] h-full bg-[#fff] fixed  duration-500 ease-out left-0 transition-transform transform ${show ? "translate-x-0" : "-translate-x-full"}`}>
                 <div onClick={() => {navigate("/");}}
 			    className={`w-[100%] mt-[30px] sm:mt-[5px] min-h-[45px] flex justify-start  items-center pl-[20px] mb-[5px] rounded-lg cursor-pointer 
           ${active === "/" ? "bg-primary text-white" : "text-primary"}`}>
@@ -469,5 +476,4 @@ const Mobilehome = () => {
     </div>
   )
 }
-
 export default Mobilehome
