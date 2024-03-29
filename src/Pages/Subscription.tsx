@@ -122,14 +122,7 @@ const Subscription = () => {
             </div>
          </div>
          
-         <div className="md:mt-[100px] sm:mt-[150px] md:p-[20px] sm:p-[20px]">
-          <aside className="text-white  w-60 py-4 pl-20 h-screen bg-gradient-to-b from-blue-900 to-blue-400 relative">
-      <a href="#" className="text-white mt-[100px] block text-sm py-3 pl-10 pr-4 mb-2 relative hover:text-blue-600 hover:bg-white hover:border-l-4 hover:border-blue-600">
-        <i className="mr-2"></i>Link
-      </a>
-      <p className="m-0 py-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </aside>
-         </div>
+         <div className="md:mt-[100px] sm:mt-[150px] md:p-[20px] sm:p-[20px]">Subscription</div>
     </div>
   )
 }
