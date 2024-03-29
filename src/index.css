@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+
+aside a:hover::before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 70px;
+  background: transparent;
+  right: 0;
+  bottom: 100%;
+  border-bottom-right-radius: 18px;
+  box-shadow:  0 17px 0 #fff;
+}
+aside a:hover::after {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 70px;
+  background: transparent;
+  right: 0;
+  top: 100%;
+  border-top-right-radius: 18px;
+  box-shadow:  0 -17px 0 #fff;
+}
+
+
+
 :root {
   font-family: "Nunito", sans-serif;
 
